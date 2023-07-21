@@ -34,7 +34,7 @@
     <string name="regist_option_ps4_ge_8">PS4 ≥ 8.0</string>
     <string name="regist_option_ps5">PS5</string>
     <string name="regist_psn_account_id_help">About obtaining your Account ID, see</string>
-    <string name="regist_psn_account_id_help_url">https://git.sr.ht/~thestr4ng3r/chiaki/tree/master/item/README.md#obtaining-your-psn-accountid</string>
+    <string name="regist_psn_account_id_help_url">https://psn.flipscreen.games/</string>
     <string name="hint_regist_psn_online_id">PSN Online ID (username, case-sensitive)</string>
     <string name="hint_regist_psn_account_id">PSN Account ID (8 bytes, base64)</string>
     <string name="hint_regist_pin">PIN</string>
