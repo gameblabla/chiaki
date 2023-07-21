@@ -1,0 +1,53 @@
+Privacy Policy for Chiaki-Up App
+
+Effective Date: July 21th 2023
+
+Introduction
+
+This Privacy Policy is designed to inform you about how we collect, use, and safeguard your personal information while using the Chiaki-Up app. 
+
+Please read this policy carefully to understand our practices regarding your data.
+
+By installing, accessing, or using the Chiaki-Up app, you agree to the terms of this Privacy Policy. 
+
+If you do not agree with our practices, please refrain from using the app.
+
+Information We Collect
+
+Chiaki-Up is committed to the privacy and security of our users. We only collect and process the minimal amount of data required to provide the remote play functionality. When you use Chiaki-Up, we will collect the following information:
+
+PSN ID: 
+
+To enable remote play, you must provide your PlayStation Network (PSN) ID. 
+
+This ID is used solely for the purpose of connecting to your PlayStation console for remote play and is not stored on our servers.
+
+How We Use Your Information
+
+The information collected by Chiaki-Up is used exclusively for the purpose of providing remote play functionality. We do not share, sell, or disclose your data to third parties, except as required by law or as detailed in this Privacy Policy.
+
+Remote Play Service: 
+
+Your PSN ID is used solely to establish a connection between the Chiaki-Up app and your PlayStation 4/5 console. It is not used for any other purpose and is not transmitted to any external servers.
+
+Data Retention
+
+We store your PSN ID locally for use with the Chiaki-Up app. We do not store or retain any other personal information about you. If you uninstall the app or cease using Chiaki-Up, your PSN ID will also get wiped.
+
+Third-Party Services
+
+Chiaki-Up is an open-source app and does not use any third-party services that collect additional personal information. Our commitment to data privacy remains confined to the essential functionality of the remote play service.
+
+Changes to this Privacy Policy
+
+We may update this Privacy Policy from time to time to reflect changes to our data practices. We will notify you of any significant changes through the app or via the email address you provided. Please review this Privacy Policy periodically for the latest information.
+
+Contact Us
+
+If you have any questions, concerns, or feedback regarding this Privacy Policy or Chiaki-Up, please contact us at [Contact Email].
+
+Conclusion
+
+Your privacy is crucial to us, and we are dedicated to maintaining the security and confidentiality of your personal information. By using Chiaki-Up, you agree to the terms of this Privacy Policy. We encourage you to review the policy periodically for any updates. 
+
+Thank you for choosing Chiaki-Up!
