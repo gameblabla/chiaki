@@ -1,6 +1,6 @@
 // SPDX-License-Identifier: LicenseRef-AGPL-3.0-only-OpenSSL
 
-package com.metallic.chiaki.main
+package com.gameblabla.chiaki.main
 
 import android.app.ActivityOptions
 import android.content.Intent
@@ -13,17 +13,17 @@ import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
-import com.metallic.chiaki.R
-import com.metallic.chiaki.common.*
-import com.metallic.chiaki.common.ext.putRevealExtra
-import com.metallic.chiaki.common.ext.viewModelFactory
-import com.metallic.chiaki.databinding.ActivityMainBinding
-import com.metallic.chiaki.lib.ConnectInfo
-import com.metallic.chiaki.lib.DiscoveryHost
-import com.metallic.chiaki.manualconsole.EditManualConsoleActivity
-import com.metallic.chiaki.regist.RegistActivity
-import com.metallic.chiaki.settings.SettingsActivity
-import com.metallic.chiaki.stream.StreamActivity
+import com.gameblabla.chiaki.R
+import com.gameblabla.chiaki.common.*
+import com.gameblabla.chiaki.common.ext.putRevealExtra
+import com.gameblabla.chiaki.common.ext.viewModelFactory
+import com.gameblabla.chiaki.databinding.ActivityMainBinding
+import com.gameblabla.chiaki.lib.ConnectInfo
+import com.gameblabla.chiaki.lib.DiscoveryHost
+import com.gameblabla.chiaki.manualconsole.EditManualConsoleActivity
+import com.gameblabla.chiaki.regist.RegistActivity
+import com.gameblabla.chiaki.settings.SettingsActivity
+import com.gameblabla.chiaki.stream.StreamActivity
 
 class MainActivity : AppCompatActivity()
 {

@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Chiaki</string>
+    <string name="app_name">Chiaki-Up</string>
     <string name="title_main">Chiaki 千秋</string>
     <string name="title_settings">Settings</string>
     <string name="alert_message_standby_wakeup">The Console is currently in standby mode. Do you want to send a Wakeup packet instead of trying to connect immediately?</string>

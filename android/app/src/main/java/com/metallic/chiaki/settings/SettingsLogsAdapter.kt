@@ -1,14 +1,14 @@
 // SPDX-License-Identifier: LicenseRef-AGPL-3.0-only-OpenSSL
 
-package com.metallic.chiaki.settings
+package com.gameblabla.chiaki.settings
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
-import com.metallic.chiaki.R
-import com.metallic.chiaki.common.LogFile
-import com.metallic.chiaki.common.ext.inflate
-import com.metallic.chiaki.databinding.ItemLogFileBinding
+import com.gameblabla.chiaki.R
+import com.gameblabla.chiaki.common.LogFile
+import com.gameblabla.chiaki.common.ext.inflate
+import com.gameblabla.chiaki.databinding.ItemLogFileBinding
 import java.text.DateFormat
 import java.text.SimpleDateFormat
 import java.util.*

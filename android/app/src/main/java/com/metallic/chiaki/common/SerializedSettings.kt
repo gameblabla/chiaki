@@ -1,6 +1,6 @@
 // SPDX-License-Identifier: LicenseRef-AGPL-3.0-only-OpenSSL
 
-package com.metallic.chiaki.common
+package com.gameblabla.chiaki.common
 
 import android.app.Activity
 import android.content.ClipData
@@ -11,8 +11,8 @@ import android.util.Log
 import androidx.core.content.FileProvider
 import androidx.room.*
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
-import com.metallic.chiaki.R
-import com.metallic.chiaki.lib.Target
+import com.gameblabla.chiaki.R
+import com.gameblabla.chiaki.lib.Target
 import com.squareup.moshi.*
 import io.reactivex.Completable
 import io.reactivex.Flowable

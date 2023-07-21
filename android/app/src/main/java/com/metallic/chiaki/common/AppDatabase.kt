@@ -1,12 +1,12 @@
 // SPDX-License-Identifier: LicenseRef-AGPL-3.0-only-OpenSSL
 
-package com.metallic.chiaki.common
+package com.gameblabla.chiaki.common
 
 import android.content.Context
 import androidx.room.*
 import androidx.room.migration.Migration
 import androidx.sqlite.db.SupportSQLiteDatabase
-import com.metallic.chiaki.lib.Target
+import com.gameblabla.chiaki.lib.Target
 
 @Database(
 	version = 2,

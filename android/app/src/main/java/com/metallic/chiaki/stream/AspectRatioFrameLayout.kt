@@ -1,4 +1,4 @@
-package com.metallic.chiaki.stream
+package com.gameblabla.chiaki.stream
 
 import android.content.Context
 import android.util.AttributeSet

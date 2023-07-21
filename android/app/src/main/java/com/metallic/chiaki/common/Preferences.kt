@@ -1,16 +1,16 @@
 // SPDX-License-Identifier: LicenseRef-AGPL-3.0-only-OpenSSL
 
-package com.metallic.chiaki.common
+package com.gameblabla.chiaki.common
 
 import android.content.Context
 import android.content.SharedPreferences
 import androidx.annotation.StringRes
 import androidx.preference.PreferenceManager
-import com.metallic.chiaki.R
-import com.metallic.chiaki.lib.Codec
-import com.metallic.chiaki.lib.ConnectVideoProfile
-import com.metallic.chiaki.lib.VideoFPSPreset
-import com.metallic.chiaki.lib.VideoResolutionPreset
+import com.gameblabla.chiaki.R
+import com.gameblabla.chiaki.lib.Codec
+import com.gameblabla.chiaki.lib.ConnectVideoProfile
+import com.gameblabla.chiaki.lib.VideoFPSPreset
+import com.gameblabla.chiaki.lib.VideoResolutionPreset
 import io.reactivex.Observable
 import io.reactivex.subjects.BehaviorSubject
 import kotlin.math.max
@@ -32,10 +32,10 @@ class Preferences(context: Context)
 		FPS_60("60", R.string.preferences_fps_title_60, VideoFPSPreset.FPS_60)
 	}
 
-	enum class Codec(val value: String, @StringRes val title: Int, val codec: com.metallic.chiaki.lib.Codec)
+	enum class Codec(val value: String, @StringRes val title: Int, val codec: com.gameblabla.chiaki.lib.Codec)
 	{
-		CODEC_H264("h264", R.string.preferences_codec_title_h264, com.metallic.chiaki.lib.Codec.CODEC_H264),
-		CODEC_H265("h265", R.string.preferences_codec_title_h265, com.metallic.chiaki.lib.Codec.CODEC_H265)
+		CODEC_H264("h264", R.string.preferences_codec_title_h264, com.gameblabla.chiaki.lib.Codec.CODEC_H264),
+		CODEC_H265("h265", R.string.preferences_codec_title_h265, com.gameblabla.chiaki.lib.Codec.CODEC_H265)
 	}
 
 	companion object

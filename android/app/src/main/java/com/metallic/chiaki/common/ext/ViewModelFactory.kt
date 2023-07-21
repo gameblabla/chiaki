@@ -1,4 +1,4 @@
-package com.metallic.chiaki.common.ext
+package com.gameblabla.chiaki.common.ext
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider

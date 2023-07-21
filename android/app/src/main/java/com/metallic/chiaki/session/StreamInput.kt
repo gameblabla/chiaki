@@ -1,4 +1,4 @@
-package com.metallic.chiaki.session
+package com.gameblabla.chiaki.session
 
 import android.content.Context
 import android.hardware.*
@@ -7,8 +7,8 @@ import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.LifecycleObserver
 import androidx.lifecycle.LifecycleOwner
 import androidx.lifecycle.OnLifecycleEvent
-import com.metallic.chiaki.common.Preferences
-import com.metallic.chiaki.lib.ControllerState
+import com.gameblabla.chiaki.common.Preferences
+import com.gameblabla.chiaki.lib.ControllerState
 
 class StreamInput(val context: Context, val preferences: Preferences)
 {

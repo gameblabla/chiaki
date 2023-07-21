@@ -1,6 +1,6 @@
 // SPDX-License-Identifier: LicenseRef-AGPL-3.0-only-OpenSSL
 
-package com.metallic.chiaki.main
+package com.gameblabla.chiaki.main
 
 import android.animation.Animator
 import android.animation.AnimatorSet
@@ -21,7 +21,7 @@ import androidx.core.view.isInvisible
 import androidx.core.view.isVisible
 import com.google.android.material.floatingactionbutton.FloatingActionButton
 import com.google.android.material.transformation.ExpandableTransformationBehavior
-import com.metallic.chiaki.R
+import com.gameblabla.chiaki.R
 
 class FloatingActionButtonBackgroundBehavior @JvmOverloads constructor(context: Context? = null, attrs: AttributeSet? = null) : ExpandableTransformationBehavior(context, attrs)
 {

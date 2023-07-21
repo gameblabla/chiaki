@@ -1,6 +1,6 @@
 // SPDX-License-Identifier: LicenseRef-AGPL-3.0-only-OpenSSL
 
-package com.metallic.chiaki.common
+package com.gameblabla.chiaki.common
 
 import android.content.Context
 import java.io.File
@@ -9,7 +9,7 @@ import java.text.SimpleDateFormat
 import java.util.*
 import java.util.regex.Pattern
 
-val fileProviderAuthority = "com.metallic.chiaki.fileprovider"
+val fileProviderAuthority = "com.gameblabla.chiaki.fileprovider"
 private const val baseDirName = "session_logs" // must be in sync with filepaths.xml
 private val dateFormat = SimpleDateFormat("yyyy-MM-dd_HH-mm-ss-SSS", Locale.US)
 private const val filePrefix = "chiaki_session_"

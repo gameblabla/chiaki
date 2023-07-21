@@ -1,6 +1,6 @@
 // SPDX-License-Identifier: LicenseRef-AGPL-3.0-only-OpenSSL
 
-package com.metallic.chiaki.main
+package com.gameblabla.chiaki.main
 
 import android.util.Log
 import android.view.LayoutInflater
@@ -12,13 +12,13 @@ import androidx.core.view.isGone
 import androidx.core.view.isVisible
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.RecyclerView
-import com.metallic.chiaki.R
-import com.metallic.chiaki.common.DiscoveredDisplayHost
-import com.metallic.chiaki.common.DisplayHost
-import com.metallic.chiaki.common.ManualDisplayHost
-import com.metallic.chiaki.common.ext.inflate
-import com.metallic.chiaki.databinding.ItemDisplayHostBinding
-import com.metallic.chiaki.lib.DiscoveryHost
+import com.gameblabla.chiaki.R
+import com.gameblabla.chiaki.common.DiscoveredDisplayHost
+import com.gameblabla.chiaki.common.DisplayHost
+import com.gameblabla.chiaki.common.ManualDisplayHost
+import com.gameblabla.chiaki.common.ext.inflate
+import com.gameblabla.chiaki.databinding.ItemDisplayHostBinding
+import com.gameblabla.chiaki.lib.DiscoveryHost
 
 class DisplayHostDiffCallback(val old: List<DisplayHost>, val new: List<DisplayHost>): DiffUtil.Callback()
 {

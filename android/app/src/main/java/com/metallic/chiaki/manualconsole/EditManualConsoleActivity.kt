@@ -1,6 +1,6 @@
 // SPDX-License-Identifier: LicenseRef-AGPL-3.0-only-OpenSSL
 
-package com.metallic.chiaki.manualconsole
+package com.gameblabla.chiaki.manualconsole
 
 import android.content.Intent
 import android.os.Bundle
@@ -11,12 +11,12 @@ import android.widget.ArrayAdapter
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
-import com.metallic.chiaki.R
-import com.metallic.chiaki.common.RegisteredHost
-import com.metallic.chiaki.common.ext.RevealActivity
-import com.metallic.chiaki.common.ext.viewModelFactory
-import com.metallic.chiaki.common.getDatabase
-import com.metallic.chiaki.databinding.ActivityEditManualBinding
+import com.gameblabla.chiaki.R
+import com.gameblabla.chiaki.common.RegisteredHost
+import com.gameblabla.chiaki.common.ext.RevealActivity
+import com.gameblabla.chiaki.common.ext.viewModelFactory
+import com.gameblabla.chiaki.common.getDatabase
+import com.gameblabla.chiaki.databinding.ActivityEditManualBinding
 import io.reactivex.android.schedulers.AndroidSchedulers
 import io.reactivex.disposables.CompositeDisposable
 import io.reactivex.rxkotlin.addTo

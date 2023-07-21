@@ -1,6 +1,6 @@
 // SPDX-License-Identifier: LicenseRef-AGPL-3.0-only-OpenSSL
 
-package com.metallic.chiaki.regist
+package com.gameblabla.chiaki.regist
 
 import android.app.Activity
 import android.content.Intent
@@ -12,12 +12,12 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
-import com.metallic.chiaki.R
-import com.metallic.chiaki.common.MacAddress
-import com.metallic.chiaki.common.ext.viewModelFactory
-import com.metallic.chiaki.common.getDatabase
-import com.metallic.chiaki.databinding.ActivityRegistExecuteBinding
-import com.metallic.chiaki.lib.RegistInfo
+import com.gameblabla.chiaki.R
+import com.gameblabla.chiaki.common.MacAddress
+import com.gameblabla.chiaki.common.ext.viewModelFactory
+import com.gameblabla.chiaki.common.getDatabase
+import com.gameblabla.chiaki.databinding.ActivityRegistExecuteBinding
+import com.gameblabla.chiaki.lib.RegistInfo
 import kotlin.math.max
 
 class RegistExecuteActivity: AppCompatActivity()

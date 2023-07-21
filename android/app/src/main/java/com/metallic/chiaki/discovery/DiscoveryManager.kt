@@ -1,14 +1,14 @@
 // SPDX-License-Identifier: LicenseRef-AGPL-3.0-only-OpenSSL
 
-package com.metallic.chiaki.discovery
+package com.gameblabla.chiaki.discovery
 
 import android.util.Log
-import com.metallic.chiaki.common.MacAddress
-import com.metallic.chiaki.common.ext.hexToByteArray
-import com.metallic.chiaki.lib.CreateError
-import com.metallic.chiaki.lib.DiscoveryHost
-import com.metallic.chiaki.lib.DiscoveryService
-import com.metallic.chiaki.lib.DiscoveryServiceOptions
+import com.gameblabla.chiaki.common.MacAddress
+import com.gameblabla.chiaki.common.ext.hexToByteArray
+import com.gameblabla.chiaki.lib.CreateError
+import com.gameblabla.chiaki.lib.DiscoveryHost
+import com.gameblabla.chiaki.lib.DiscoveryService
+import com.gameblabla.chiaki.lib.DiscoveryServiceOptions
 import io.reactivex.Observable
 import io.reactivex.android.schedulers.AndroidSchedulers
 import io.reactivex.disposables.CompositeDisposable

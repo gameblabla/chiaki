@@ -1,11 +1,11 @@
 // SPDX-License-Identifier: LicenseRef-AGPL-3.0-only-OpenSSL
 
-package com.metallic.chiaki.common
+package com.gameblabla.chiaki.common
 
 import androidx.room.*
 import androidx.room.ColumnInfo.Companion.BLOB
-import com.metallic.chiaki.lib.RegistHost
-import com.metallic.chiaki.lib.Target
+import com.gameblabla.chiaki.lib.RegistHost
+import com.gameblabla.chiaki.lib.Target
 import io.reactivex.Completable
 import io.reactivex.Flowable
 import io.reactivex.Maybe

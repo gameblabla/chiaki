@@ -1,6 +1,6 @@
 // SPDX-License-Identifier: LicenseRef-AGPL-3.0-only-OpenSSL
 
-package com.metallic.chiaki.settings
+package com.gameblabla.chiaki.settings
 
 import android.content.ClipData
 import android.content.Intent
@@ -16,12 +16,12 @@ import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.ItemTouchHelper
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import com.metallic.chiaki.R
-import com.metallic.chiaki.common.LogFile
-import com.metallic.chiaki.common.LogManager
-import com.metallic.chiaki.common.ext.viewModelFactory
-import com.metallic.chiaki.common.fileProviderAuthority
-import com.metallic.chiaki.databinding.FragmentSettingsLogsBinding
+import com.gameblabla.chiaki.R
+import com.gameblabla.chiaki.common.LogFile
+import com.gameblabla.chiaki.common.LogManager
+import com.gameblabla.chiaki.common.ext.viewModelFactory
+import com.gameblabla.chiaki.common.fileProviderAuthority
+import com.gameblabla.chiaki.databinding.FragmentSettingsLogsBinding
 
 class SettingsLogsFragment: AppCompatDialogFragment(), TitleFragment
 {

@@ -1,8 +1,8 @@
 // SPDX-License-Identifier: LicenseRef-AGPL-3.0-only-OpenSSL
 
-package com.metallic.chiaki.common
+package com.gameblabla.chiaki.common
 
-import com.metallic.chiaki.lib.DiscoveryHost
+import com.gameblabla.chiaki.lib.DiscoveryHost
 
 sealed class DisplayHost
 {

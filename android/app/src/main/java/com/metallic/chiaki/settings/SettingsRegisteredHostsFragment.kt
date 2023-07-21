@@ -1,6 +1,6 @@
 // SPDX-License-Identifier: LicenseRef-AGPL-3.0-only-OpenSSL
 
-package com.metallic.chiaki.settings
+package com.gameblabla.chiaki.settings
 
 import android.app.ActivityOptions
 import android.content.Intent
@@ -16,12 +16,12 @@ import androidx.recyclerview.widget.ItemTouchHelper
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
-import com.metallic.chiaki.R
-import com.metallic.chiaki.common.ext.putRevealExtra
-import com.metallic.chiaki.common.ext.viewModelFactory
-import com.metallic.chiaki.common.getDatabase
-import com.metallic.chiaki.databinding.FragmentSettingsRegisteredHostsBinding
-import com.metallic.chiaki.regist.RegistActivity
+import com.gameblabla.chiaki.R
+import com.gameblabla.chiaki.common.ext.putRevealExtra
+import com.gameblabla.chiaki.common.ext.viewModelFactory
+import com.gameblabla.chiaki.common.getDatabase
+import com.gameblabla.chiaki.databinding.FragmentSettingsRegisteredHostsBinding
+import com.gameblabla.chiaki.regist.RegistActivity
 
 class SettingsRegisteredHostsFragment: AppCompatDialogFragment(), TitleFragment
 {

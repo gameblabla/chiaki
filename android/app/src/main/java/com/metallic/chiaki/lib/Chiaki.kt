@@ -1,4 +1,4 @@
-package com.metallic.chiaki.lib
+package com.gameblabla.chiaki.lib
 
 import android.os.Parcelable
 import android.util.Log

@@ -1,16 +1,16 @@
 // SPDX-License-Identifier: LicenseRef-AGPL-3.0-only-OpenSSL
 
-package com.metallic.chiaki.regist
+package com.gameblabla.chiaki.regist
 
 import android.util.Log
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
-import com.metallic.chiaki.common.AppDatabase
-import com.metallic.chiaki.common.MacAddress
-import com.metallic.chiaki.common.RegisteredHost
-import com.metallic.chiaki.common.ext.toLiveData
-import com.metallic.chiaki.lib.*
+import com.gameblabla.chiaki.common.AppDatabase
+import com.gameblabla.chiaki.common.MacAddress
+import com.gameblabla.chiaki.common.RegisteredHost
+import com.gameblabla.chiaki.common.ext.toLiveData
+import com.gameblabla.chiaki.lib.*
 import io.reactivex.android.schedulers.AndroidSchedulers
 import io.reactivex.disposables.CompositeDisposable
 import io.reactivex.rxkotlin.addTo

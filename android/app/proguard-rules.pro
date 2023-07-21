@@ -21,7 +21,7 @@
 #-renamesourcefileattribute SourceFile
 
 -dontobfuscate
--keep class com.metallic.chiaki.** { *; }
+-keep class com.gameblabla.chiaki.** { *; }
 
 
 ##########################################

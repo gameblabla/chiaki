@@ -1,6 +1,6 @@
 // SPDX-License-Identifier: LicenseRef-AGPL-3.0-only-OpenSSL
 
-package com.metallic.chiaki.settings
+package com.gameblabla.chiaki.settings
 
 import android.app.Activity
 import android.content.Intent
@@ -10,12 +10,12 @@ import android.text.InputType
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import androidx.preference.*
-import com.metallic.chiaki.R
-import com.metallic.chiaki.common.Preferences
-import com.metallic.chiaki.common.exportAndShareAllSettings
-import com.metallic.chiaki.common.ext.viewModelFactory
-import com.metallic.chiaki.common.getDatabase
-import com.metallic.chiaki.common.importSettingsFromUri
+import com.gameblabla.chiaki.R
+import com.gameblabla.chiaki.common.Preferences
+import com.gameblabla.chiaki.common.exportAndShareAllSettings
+import com.gameblabla.chiaki.common.ext.viewModelFactory
+import com.gameblabla.chiaki.common.getDatabase
+import com.gameblabla.chiaki.common.importSettingsFromUri
 import io.reactivex.disposables.CompositeDisposable
 import io.reactivex.rxkotlin.addTo
 
