@@ -1,6 +1,6 @@
 // SPDX-License-Identifier: LicenseRef-AGPL-3.0-only-OpenSSL
 
-package com.metallic.chiaki.common.ext
+package com.gameblabla.chiaki.common.ext
 
 import android.content.Intent
 import android.graphics.Rect

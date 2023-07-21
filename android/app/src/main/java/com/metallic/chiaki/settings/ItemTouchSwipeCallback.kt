@@ -1,6 +1,6 @@
 // SPDX-License-Identifier: LicenseRef-AGPL-3.0-only-OpenSSL
 
-package com.metallic.chiaki.settings
+package com.gameblabla.chiaki.settings
 
 import android.content.Context
 import android.graphics.Canvas
@@ -8,7 +8,7 @@ import android.graphics.Rect
 import androidx.core.graphics.withClip
 import androidx.recyclerview.widget.ItemTouchHelper
 import androidx.recyclerview.widget.RecyclerView
-import com.metallic.chiaki.R
+import com.gameblabla.chiaki.R
 
 abstract class ItemTouchSwipeCallback(context: Context): ItemTouchHelper.SimpleCallback(0, ItemTouchHelper.LEFT)
 {

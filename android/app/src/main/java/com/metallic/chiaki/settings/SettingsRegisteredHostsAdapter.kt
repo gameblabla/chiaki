@@ -1,12 +1,12 @@
 // SPDX-License-Identifier: LicenseRef-AGPL-3.0-only-OpenSSL
 
-package com.metallic.chiaki.settings
+package com.gameblabla.chiaki.settings
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
-import com.metallic.chiaki.common.RegisteredHost
-import com.metallic.chiaki.databinding.ItemRegisteredHostBinding
+import com.gameblabla.chiaki.common.RegisteredHost
+import com.gameblabla.chiaki.databinding.ItemRegisteredHostBinding
 
 class SettingsRegisteredHostsAdapter: RecyclerView.Adapter<SettingsRegisteredHostsAdapter.ViewHolder>()
 {

@@ -1,14 +1,14 @@
 // SPDX-License-Identifier: LicenseRef-AGPL-3.0-only-OpenSSL
 
-package com.metallic.chiaki.session
+package com.gameblabla.chiaki.session
 
 import android.graphics.SurfaceTexture
 import android.util.Log
 import android.view.*
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
-import com.metallic.chiaki.common.LogManager
-import com.metallic.chiaki.lib.*
+import com.gameblabla.chiaki.common.LogManager
+import com.gameblabla.chiaki.lib.*
 
 sealed class StreamState
 object StreamStateIdle: StreamState()

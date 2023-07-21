@@ -1,6 +1,6 @@
 // SPDX-License-Identifier: LicenseRef-AGPL-3.0-only-OpenSSL
 
-package com.metallic.chiaki.touchcontrols
+package com.gameblabla.chiaki.touchcontrols
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -9,8 +9,8 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.Observer
-import com.metallic.chiaki.databinding.FragmentControlsBinding
-import com.metallic.chiaki.lib.ControllerState
+import com.gameblabla.chiaki.databinding.FragmentControlsBinding
+import com.gameblabla.chiaki.lib.ControllerState
 import io.reactivex.Observable
 import io.reactivex.rxkotlin.Observables.combineLatest
 import io.reactivex.subjects.BehaviorSubject

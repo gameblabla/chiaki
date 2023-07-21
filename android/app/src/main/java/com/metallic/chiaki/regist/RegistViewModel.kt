@@ -1,6 +1,6 @@
 // SPDX-License-Identifier: LicenseRef-AGPL-3.0-only-OpenSSL
 
-package com.metallic.chiaki.regist
+package com.gameblabla.chiaki.regist
 
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel

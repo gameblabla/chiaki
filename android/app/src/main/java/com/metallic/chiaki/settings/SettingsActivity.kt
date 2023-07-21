@@ -1,6 +1,6 @@
 // SPDX-License-Identifier: LicenseRef-AGPL-3.0-only-OpenSSL
 
-package com.metallic.chiaki.settings
+package com.gameblabla.chiaki.settings
 
 import android.content.res.Resources
 import android.os.Bundle
@@ -8,8 +8,8 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import androidx.preference.Preference
 import androidx.preference.PreferenceFragmentCompat
-import com.metallic.chiaki.R
-import com.metallic.chiaki.databinding.ActivitySettingsBinding
+import com.gameblabla.chiaki.R
+import com.gameblabla.chiaki.databinding.ActivitySettingsBinding
 
 interface TitleFragment
 {

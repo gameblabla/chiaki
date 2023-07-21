@@ -1,15 +1,15 @@
 // SPDX-License-Identifier: LicenseRef-AGPL-3.0-only-OpenSSL
 
-package com.metallic.chiaki.stream
+package com.gameblabla.chiaki.stream
 
 import android.app.Application
 import android.content.Context
 import androidx.lifecycle.*
-import com.metallic.chiaki.common.LogManager
-import com.metallic.chiaki.session.StreamSession
-import com.metallic.chiaki.common.Preferences
-import com.metallic.chiaki.lib.*
-import com.metallic.chiaki.session.StreamInput
+import com.gameblabla.chiaki.common.LogManager
+import com.gameblabla.chiaki.session.StreamSession
+import com.gameblabla.chiaki.common.Preferences
+import com.gameblabla.chiaki.lib.*
+import com.gameblabla.chiaki.session.StreamInput
 
 class StreamViewModel(val application: Application, val connectInfo: ConnectInfo): ViewModel()
 {

@@ -1,6 +1,6 @@
 // SPDX-License-Identifier: LicenseRef-AGPL-3.0-only-OpenSSL
 
-package com.metallic.chiaki.common
+package com.gameblabla.chiaki.common
 
 import com.squareup.moshi.FromJson
 import com.squareup.moshi.JsonDataException

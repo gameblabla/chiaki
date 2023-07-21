@@ -1,6 +1,6 @@
 // SPDX-License-Identifier: LicenseRef-AGPL-3.0-only-OpenSSL
 
-package com.metallic.chiaki.regist
+package com.gameblabla.chiaki.regist
 
 import android.content.Intent
 import android.os.Bundle
@@ -10,11 +10,11 @@ import android.view.Window
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
-import com.metallic.chiaki.R
-import com.metallic.chiaki.common.ext.RevealActivity
-import com.metallic.chiaki.databinding.ActivityRegistBinding
-import com.metallic.chiaki.lib.RegistInfo
-import com.metallic.chiaki.lib.Target
+import com.gameblabla.chiaki.R
+import com.gameblabla.chiaki.common.ext.RevealActivity
+import com.gameblabla.chiaki.databinding.ActivityRegistBinding
+import com.gameblabla.chiaki.lib.RegistInfo
+import com.gameblabla.chiaki.lib.Target
 import java.lang.IllegalArgumentException
 
 class RegistActivity: AppCompatActivity(), RevealActivity

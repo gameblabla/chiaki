@@ -1,6 +1,6 @@
 // SPDX-License-Identifier: LicenseRef-AGPL-3.0-only-OpenSSL
 
-package com.metallic.chiaki.touchcontrols
+package com.gameblabla.chiaki.touchcontrols
 
 import android.content.Context
 import android.graphics.Canvas
@@ -8,8 +8,8 @@ import android.graphics.drawable.Drawable
 import android.util.AttributeSet
 import android.view.MotionEvent
 import android.view.View
-import com.metallic.chiaki.R
-import com.metallic.chiaki.lib.ControllerState
+import com.gameblabla.chiaki.R
+import com.gameblabla.chiaki.lib.ControllerState
 import io.reactivex.Observable
 import io.reactivex.subjects.BehaviorSubject
 import io.reactivex.subjects.Subject

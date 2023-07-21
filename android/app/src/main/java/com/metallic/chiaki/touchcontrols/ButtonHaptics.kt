@@ -1,11 +1,11 @@
-package com.metallic.chiaki.touchcontrols
+package com.gameblabla.chiaki.touchcontrols
 
 import android.content.Context
 import android.os.Build
 import android.os.VibrationEffect
 import android.os.Vibrator
 import androidx.appcompat.app.AppCompatActivity
-import com.metallic.chiaki.common.Preferences
+import com.gameblabla.chiaki.common.Preferences
 
 class ButtonHaptics(val context: Context)
 {

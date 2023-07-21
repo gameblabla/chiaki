@@ -1,6 +1,6 @@
 // SPDX-License-Identifier: LicenseRef-AGPL-3.0-only-OpenSSL
 
-package com.metallic.chiaki.stream
+package com.gameblabla.chiaki.stream
 
 import android.animation.Animator
 import android.animation.AnimatorListenerAdapter
@@ -15,16 +15,16 @@ import androidx.core.view.isVisible
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.*
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
-import com.metallic.chiaki.R
-import com.metallic.chiaki.common.Preferences
-import com.metallic.chiaki.common.ext.viewModelFactory
-import com.metallic.chiaki.databinding.ActivityStreamBinding
-import com.metallic.chiaki.lib.ConnectInfo
-import com.metallic.chiaki.lib.ConnectVideoProfile
-import com.metallic.chiaki.session.*
-import com.metallic.chiaki.touchcontrols.DefaultTouchControlsFragment
-import com.metallic.chiaki.touchcontrols.TouchControlsFragment
-import com.metallic.chiaki.touchcontrols.TouchpadOnlyFragment
+import com.gameblabla.chiaki.R
+import com.gameblabla.chiaki.common.Preferences
+import com.gameblabla.chiaki.common.ext.viewModelFactory
+import com.gameblabla.chiaki.databinding.ActivityStreamBinding
+import com.gameblabla.chiaki.lib.ConnectInfo
+import com.gameblabla.chiaki.lib.ConnectVideoProfile
+import com.gameblabla.chiaki.session.*
+import com.gameblabla.chiaki.touchcontrols.DefaultTouchControlsFragment
+import com.gameblabla.chiaki.touchcontrols.TouchControlsFragment
+import com.gameblabla.chiaki.touchcontrols.TouchpadOnlyFragment
 import io.reactivex.disposables.CompositeDisposable
 import io.reactivex.rxkotlin.addTo
 import kotlin.math.min
