@@ -18,12 +18,14 @@ def chiakiVersion = "$chiakiVersionMajor.$chiakiVersionMinor.$chiakiVersionPatch
 println("Determined Chiaki Version: $chiakiVersion")
 
 android {
-    compileSdkVersion 33
+	namespace "com.gameblabla.chiaki" 
+    compileSdkVersion 35
+    buildToolsVersion "35.0.0"
     defaultConfig {
         applicationId "com.gameblabla.chiaki"
-        minSdkVersion 21
-        targetSdkVersion 33
-        versionCode 11
+        minSdkVersion 30
+        targetSdkVersion 35
+        versionCode 16
         versionName chiakiVersion
         externalNativeBuild {
             cmake {
@@ -35,7 +37,8 @@ android {
                         "-DCHIAKI_ENABLE_FFMPEG_DECODER=OFF",
                         "-DCHIAKI_ENABLE_PI_DECODER=OFF",
                         "-DCHIAKI_LIB_ENABLE_OPUS=OFF",
-                        "-DCHIAKI_LIB_OPENSSL_EXTERNAL_PROJECT=ON"
+                        "-DCHIAKI_LIB_OPENSSL_EXTERNAL_PROJECT=ON",
+                        "-DCMAKE_CXX_FLAGS=-std=c++17"
             }
         }
     }
@@ -43,25 +46,34 @@ android {
         viewBinding true
     }
     compileOptions {
-        sourceCompatibility JavaVersion.VERSION_1_8
-        targetCompatibility JavaVersion.VERSION_1_8
+        sourceCompatibility JavaVersion.VERSION_17
+        targetCompatibility JavaVersion.VERSION_17
     }
     kotlinOptions {
-        jvmTarget = "1.8"
+        jvmTarget = "17"
     }
     externalNativeBuild {
         cmake {
             version "3.22.1"
             path rootCMakeLists
+
         }
     }
-    signingConfigs {
-        release
-    }
+	signingConfigs {
+		release {}
+	}
+
     buildTypes {
         release {
             minifyEnabled true
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    
+    
+    packagingOptions {
+        jniLibs {
+            useLegacyPackaging = false
         }
     }
 
@@ -71,6 +83,7 @@ android {
     if (propertiesFile.exists()) {
         properties.load(propertiesFile.newDataInputStream())
     }
+
 
 	if(properties.containsKey("chiakiKeystore")) {
         println("Enabling Local Signing")
@@ -83,6 +96,9 @@ android {
     } else {
         println("Signing not enabled")
     }
+
+    
+    ndkVersion "29.0.14206865"
 }
 
 tasks.withType(org.jetbrains.kotlin.gradle.tasks.KotlinCompile).all {
