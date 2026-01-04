@@ -15,4 +15,6 @@
     <color name="control_pressed">#88ffffff</color>
 
     <color name="item_delete_background">#B71C1C</color>
+    <color name="toolbar_background_translucent">#CC000000</color> <!-- black 80% opacity -->
+
 </resources>

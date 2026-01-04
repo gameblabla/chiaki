@@ -12,7 +12,17 @@
         <item name="alertDialogTheme">@style/AppTheme.AlertDialog.NonMaterial</item>
 
         <item name="android:windowActivityTransitions">true</item>
+        
+		<item name="android:statusBarColor">@android:color/transparent</item>
+		<item name="android:navigationBarColor">@android:color/transparent</item>
     </style>
+    
+	<style name="AppTheme.Toolbar.Floating" parent="Widget.MaterialComponents.Toolbar">
+		<item name="android:background">?attr/colorPrimarySurface</item>
+		<item name="elevation">8dp</item> <!-- floating shadow -->
+		<item name="android:background">#CC000000</item> <!-- black 80% opacity -->
+	</style>
+
 
     <style name="AppTheme.Toolbar" parent="AppTheme">
         <item name="android:textColorSecondary">#fff</item>

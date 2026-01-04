@@ -24,6 +24,13 @@ import com.gameblabla.chiaki.manualconsole.EditManualConsoleActivity
 import com.gameblabla.chiaki.regist.RegistActivity
 import com.gameblabla.chiaki.settings.SettingsActivity
 import com.gameblabla.chiaki.stream.StreamActivity
+import androidx.core.view.WindowCompat
+import androidx.core.view.ViewCompat
+import androidx.core.view.WindowInsetsCompat
+import androidx.core.view.updatePadding
+import androidx.coordinatorlayout.widget.CoordinatorLayout
+import androidx.core.view.updateLayoutParams
+
 
 class MainActivity : AppCompatActivity()
 {
@@ -32,14 +39,45 @@ class MainActivity : AppCompatActivity()
 	private lateinit var binding: ActivityMainBinding
 	private var discoveryMenuItem: MenuItem? = null
 
+	// Extension for dp conversion
+	private val Int.dp: Int
+	get() = (this * resources.displayMetrics.density).toInt()
+
+
 	override fun onCreate(savedInstanceState: Bundle?)
 	{
 		super.onCreate(savedInstanceState)
+
+		// Allow drawing behind status bar
+		WindowCompat.setDecorFitsSystemWindows(window, false)
+		
 		binding = ActivityMainBinding.inflate(layoutInflater)
 		setContentView(binding.root)
 
 		title = ""
 		setSupportActionBar(binding.toolbar)
+		
+		ViewCompat.setOnApplyWindowInsetsListener(binding.toolbar) { v, insets ->
+			val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
+			v.setPadding(
+				v.paddingLeft,
+				systemBars.top, // only status bar
+				v.paddingRight,
+				v.paddingBottom
+			)
+			insets
+		}
+
+		ViewCompat.setOnApplyWindowInsetsListener(binding.floatingActionButton) { fab, insets ->
+			val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
+			fab.updateLayoutParams<CoordinatorLayout.LayoutParams> {
+				bottomMargin = 16.dp + systemBars.bottom
+				rightMargin = 16.dp + systemBars.right
+				leftMargin = 16.dp + systemBars.left
+				topMargin = 2.dp + systemBars.top
+			}
+			insets
+		}
 
 		binding.floatingActionButton.setOnClickListener {
 			expandFloatingActionButton(!binding.floatingActionButton.isExpanded)
