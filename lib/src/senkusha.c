@@ -29,6 +29,7 @@
 #define SENKUSHA_PORT 9297
 
 #define EXPECT_TIMEOUT_MS 5000
+#define CONNECT_TIMEOUT_MS 30000
 
 #define SENKUSHA_PING_COUNT_DEFAULT 10
 #define EXPECT_PONG_TIMEOUT_MS 1000
@@ -163,7 +164,7 @@ CHIAKI_EXPORT ChiakiErrorCode chiaki_senkusha_run(ChiakiSenkusha *senkusha, uint
 		QUIT(quit);
 	}
 
-	err = chiaki_cond_timedwait_pred(&senkusha->state_cond, &senkusha->state_mutex, EXPECT_TIMEOUT_MS, state_finished_cond_check, senkusha);
+	err = chiaki_cond_timedwait_pred(&senkusha->state_cond, &senkusha->state_mutex, CONNECT_TIMEOUT_MS, state_finished_cond_check, senkusha);
 	assert(err == CHIAKI_ERR_SUCCESS || err == CHIAKI_ERR_TIMEOUT);
 	if(!senkusha->state_finished)
 	{
@@ -781,6 +782,33 @@ static ChiakiErrorCode senkusha_send_big(ChiakiSenkusha *senkusha)
 	buf_size = stream.bytes_written;
 	ChiakiErrorCode err = chiaki_takion_send_message_data(&senkusha->takion, 1, 1, buf, buf_size, NULL);
 
+	return err;
+}
+
+static ChiakiErrorCode senkusha_set_version(ChiakiSenkusha *senkusha)
+{
+	tkproto_TakionMessage msg;
+	memset(&msg, 0, sizeof(msg));
+	List versions;
+	versions.items[0] = 9;
+	versions.num_items = 1;
+	msg.type = tkproto_TakionMessage_PayloadType_TAKIONPROTOCOLREQUEST;
+	msg.has_takion_protocol_request = true;
+	msg.takion_protocol_request.supported_takion_versions.arg = &versions;
+	msg.takion_protocol_request.supported_takion_versions.funcs.encode = chiaki_pb_encode_list;
+
+	uint8_t buf[12];
+	size_t buf_size;
+
+	pb_ostream_t stream = pb_ostream_from_buffer(buf, sizeof(buf));
+	bool pbr = pb_encode(&stream, tkproto_TakionMessage_fields, &msg);
+	if(!pbr)
+	{
+		CHIAKI_LOGE(senkusha->log, "Senkusha set version protobuf encoding failed");
+		return CHIAKI_ERR_UNKNOWN;
+	}
+	buf_size = stream.bytes_written;
+	ChiakiErrorCode err = chiaki_takion_send_message_data(&senkusha->takion, 1, 1, buf, buf_size, NULL);
 	return err;
 }
 
