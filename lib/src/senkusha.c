@@ -44,8 +44,10 @@
 typedef enum {
 	STATE_IDLE,
 	STATE_TAKION_CONNECT,
+	STATE_EXPECT_STREAMINFO_ACK,
 	STATE_EXPECT_BANG,
 	STATE_EXPECT_DATA_ACK,
+	STATE_EXPECT_PROTOCOL_ACK,
 	STATE_EXPECT_PONG,
 	STATE_EXPECT_MTU,
 	STATE_EXPECT_CLIENT_MTU_COMMAND
@@ -58,6 +60,7 @@ static void senkusha_takion_cb(ChiakiTakionEvent *event, void *user);
 static void senkusha_takion_data(ChiakiSenkusha *senkusha, ChiakiTakionMessageDataType data_type, uint8_t *buf, size_t buf_size);
 static void senkusha_takion_data_ack(ChiakiSenkusha *senkusha, ChiakiSeqNum32 seq_num);
 static void senkusha_takion_av(ChiakiSenkusha *senkusha, ChiakiTakionAVPacket *packet);
+static ChiakiErrorCode senkusha_set_version(ChiakiSenkusha *senkusha);
 static ChiakiErrorCode senkusha_send_big(ChiakiSenkusha *senkusha);
 static ChiakiErrorCode senkusha_send_disconnect(ChiakiSenkusha *senkusha);
 static ChiakiErrorCode senkusha_send_echo_command(ChiakiSenkusha *senkusha, bool enable);
@@ -174,6 +177,37 @@ CHIAKI_EXPORT ChiakiErrorCode chiaki_senkusha_run(ChiakiSenkusha *senkusha, uint
 
 		QUIT(quit_takion);
 	}
+	
+
+	CHIAKI_LOGI(session->log, "Setting takion versions");
+
+	senkusha->state = STATE_EXPECT_PROTOCOL_ACK;
+	senkusha->state_finished = false;
+	senkusha->state_failed = false;
+
+	err = senkusha_set_version(senkusha);
+	if(err != CHIAKI_ERR_SUCCESS)
+	{
+		CHIAKI_LOGE(session->log, "Senkusha failed to set takion version");
+		QUIT(quit_takion);
+	}
+	err = chiaki_cond_timedwait_pred(&senkusha->state_cond, &senkusha->state_mutex, EXPECT_TIMEOUT_MS, state_finished_cond_check, senkusha);
+	assert(err == CHIAKI_ERR_SUCCESS || err == CHIAKI_ERR_TIMEOUT);
+
+	if(!senkusha->state_finished)
+	{
+		if(err == CHIAKI_ERR_TIMEOUT)
+			CHIAKI_LOGE(session->log, "Senkusha set takion version receive timeout");
+
+		if(senkusha->should_stop)
+			err = CHIAKI_ERR_CANCELED;
+		else
+			CHIAKI_LOGE(session->log, "Senkusha didn't receive protocol request ack");
+
+		QUIT(quit_takion);
+	}
+
+	CHIAKI_LOGI(session->log, "Senkusha successfully set takion version");
 
 	CHIAKI_LOGI(session->log, "Senkusha sending big");
 
