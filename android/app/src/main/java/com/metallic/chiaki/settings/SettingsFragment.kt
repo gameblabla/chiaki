@@ -18,6 +18,10 @@ import com.gameblabla.chiaki.common.getDatabase
 import com.gameblabla.chiaki.common.importSettingsFromUri
 import io.reactivex.disposables.CompositeDisposable
 import io.reactivex.rxkotlin.addTo
+import android.view.View
+import androidx.core.view.ViewCompat
+import androidx.core.view.WindowInsetsCompat
+
 
 class DataStore(val preferences: Preferences): PreferenceDataStore()
 {
@@ -135,6 +139,22 @@ class SettingsFragment: PreferenceFragmentCompat(), TitleFragment
 
 		preferenceScreen.findPreference<Preference>(getString(R.string.preferences_export_settings_key))?.setOnPreferenceClickListener { exportSettings(); true }
 		preferenceScreen.findPreference<Preference>(getString(R.string.preferences_import_settings_key))?.setOnPreferenceClickListener { importSettings(); true }
+	}
+		
+	override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+		super.onViewCreated(view, savedInstanceState)
+
+		// EDGE-TO-EDGE: make bottom preferences reachable
+		ViewCompat.setOnApplyWindowInsetsListener(listView) { v, insets ->
+			val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
+			v.setPadding(
+				v.paddingLeft,
+				v.paddingTop,
+				v.paddingRight,
+				systemBars.bottom // pushes content above nav bar
+			)
+			insets
+		}
 	}
 
 	override fun onDestroy()

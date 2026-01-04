@@ -8,6 +8,8 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import androidx.preference.Preference
 import androidx.preference.PreferenceFragmentCompat
+import androidx.core.view.WindowCompat
+
 import com.gameblabla.chiaki.R
 import com.gameblabla.chiaki.databinding.ActivitySettingsBinding
 
@@ -23,6 +25,9 @@ class SettingsActivity: AppCompatActivity(), PreferenceFragmentCompat.OnPreferen
 	override fun onCreate(savedInstanceState: Bundle?)
 	{
 		super.onCreate(savedInstanceState)
+		
+		WindowCompat.setDecorFitsSystemWindows(window, false)
+		
 		binding = ActivitySettingsBinding.inflate(layoutInflater)
 		setContentView(binding.root)
 		title = ""
